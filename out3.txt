@@ -5,3 +5,32 @@ This will clear the console output.
 Run the file once while the tasks are longer. 
 
 Copy and paste the terminal results (when task_duration is 3) here.
+
+PS C:\Users\zachf\Desktop\StreamingData> cd .\streaming-02-multiple-processes\
+PS C:\Users\zachf\Desktop\StreamingData\streaming-02-multiple-processes> python .\multiple_processes.py
+2023-08-24 11:16:09,454 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2023-08-24 at 11:16 AM
+  Operating System: nt Windows 10
+  Python Version:   3.9.12
+  Path to Interpreter:  C:\Users\zachf\anaconda3\python.exe
+======================================================================
+
+2023-08-24 11:16:09,455 - INFO - Called recreate_database().       
+2023-08-24 11:16:09,455 - INFO - Called drop_table().
+2023-08-24 11:16:09,474 - INFO - Table 'pets' dropped successfully.
+2023-08-24 11:16:09,476 - INFO - Called create_table().
+2023-08-24 11:16:09,489 - INFO - Table 'pets' created successfully.
+2023-08-24 11:16:09,914 - INFO - Called process_one().
+2023-08-24 11:16:09,915 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2023-08-24 11:16:09,940 - INFO - Called process_two().
+2023-08-24 11:16:09,941 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2023-08-24 11:16:09,942 - INFO - Called process_three().
+2023-08-24 11:16:09,943 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2023-08-24 11:16:12,952 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2023-08-24 11:16:15,577 - ERROR - ERROR while P3 inserting pet Emma: database is locked
+2023-08-24 11:16:15,578 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2023-08-24 11:16:15,983 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2023-08-24 11:16:18,501 - ERROR - ERROR while P1 inserting pet Buddy: database is locked
+PS C:\Users\zachf\Desktop\StreamingData\streaming-02-multiple-processes>

@@ -1,0 +1,33 @@
+PS C:\Users\zachf\Desktop\StreamingData> cd .\streaming-02-multiple-processes\
+PS C:\Users\zachf\Desktop\StreamingData\streaming-02-multiple-processes> python .\process_streaming_zachfuller.py
+2023-08-24 12:00:47,291 - INFO - ===============================================
+2023-08-24 12:00:47,292 - INFO - Starting fake streaming process.
+2023-08-24 12:00:47,292 - INFO - Starting to stream data from Global_Missing_Migrants_Dataset.csv to ('localhost', 9999).
+2023-08-24 12:00:47,293 - INFO - Opened for reading: Global_Missing_Migrants_Dataset.csv.
+2023-08-24 12:00:47,294 - INFO - Skipped header row: ['ï»¿Year', 'IncidentLocation', 'Origin', 'Dead', 'Survived', 'Cause']
+2023-08-24 12:00:47,303 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Guatemala. 1 died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:00:50,320 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Unknown. 1 died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:00:53,323 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Unknown. 1 died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:00:56,326 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Mexico. 1 
+died and 0 survived. The cause was Violence'.
+2023-08-24 12:00:59,334 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from Europe. The incident occured in Sudan. 1 died and 2 survived. The cause was Harsh environmental conditions / lack of adequate shelter, food, water'.
+2023-08-24 12:01:02,348 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Unknown. 1 died and 0 survived. The cause was Violence'.
+2023-08-24 12:01:05,356 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from Mediterranean. The incident occured in Afghanistan,Syrian Arab Republic. 12 died and 0 survived. The cause was Drowning'.
+2023-08-24 12:01:08,363 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Unknown. 1 died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:01:11,370 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Unknown. 1 died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:01:14,378 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Unknown. 1 died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:01:17,383 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Mexico. 1 
+died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:01:20,396 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Unknown. 1 died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:01:23,409 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Unknown. 1 died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:01:26,412 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from North America. The incident occured in Unknown. 1 died and 0 survived. The cause was Mixed or unknown'.
+2023-08-24 12:01:29,419 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from Europe. The incident occured in Iran (Islamic Republic of). 1 died and 2 survived. The cause was Vehicle accident / death linked to hazardous transport'.
+2023-08-24 12:01:32,428 - INFO - Sent: b'A migration incident occurred in 2014. Migrants were from Caribbean. The incident occured in Haiti. 1 died 
+and 0 survived. The cause was Drowning'.
+Traceback (most recent call last):
+  File "C:\Users\zachf\Desktop\StreamingData\streaming-02-multiple-processes\process_streaming_zachfuller.py", line 78, in <module>
+    stream_row(INPUT_FILE_NAME, ADDRESS_TUPLE)
+  File "C:\Users\zachf\Desktop\StreamingData\streaming-02-multiple-processes\process_streaming_zachfuller.py", line 68, in stream_row
+    time.sleep(3) # wait 3 seconds between messages
+KeyboardInterrupt
+PS C:\Users\zachf\Desktop\StreamingData\streaming-02-multiple-processes> 
